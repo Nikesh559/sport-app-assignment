@@ -2,7 +2,6 @@
 Problem 1
 Endpoint /tour/matches returns all the matches for a given tour name.
 The endpoint latency increases linearly with the number of tours. Modify the endpoint to increase the performance.
-
 Solution:
 
 1. Created Index on column tourId in 'matches' table for optimize lookup.
@@ -11,7 +10,6 @@ Solution:
 --------------------------------------------------------------------------------------------------------------
 Problem 2
 Modify the endpoint /sport/tour/match to also return match's id, startTime and format
-
 Solution:
 
 Implemented endpoint "/sport/{id}/tour/match" that also return match's id, startTime and format
@@ -28,12 +26,6 @@ Technical Requirements:
 2. Create an endpoint to fetch news by match id
 3. Create an endpoint to fetch news by tour id
 4. Create an endpoint to fetch news by sport id
-News Model
-{
-title: string,
-description: string
-}
-
 Solution:
 
 Created new table News with below columns
@@ -43,7 +35,6 @@ Created new table News with below columns
 * type - it stores for which entity(MATCH/TOUR) this news is created. Can also create for any other type.
 * typeId - it stores the id of entity(MATCH/TOUR) 
 
-
 id 	| title	| description | type | typeId
 ----| ----- | ------| ------ | --------
 1 | IND vs AUS | Aussies | MATCH | 101
@@ -51,8 +42,6 @@ id 	| title	| description | type | typeId
 3 | IPL | IPL Matches | TOUR | 103
 4 | MI vs RCB | RCB Won | MATCH | 104
 5 | WI vs IND | India Won | MATCH | 105
-
-
 
 Technical Requirements Solutions:
 1. Create an endpoint to create news.
